@@ -60,20 +60,6 @@ const TemplateWrapper = ({ children }) => {
               }
             }
           } 
-          allDatoCmsAsset(filter: {tags: {in: "home"}}) {
-            edges {
-              node {
-                id
-                url
-                author
-                height
-                size
-                smartTags
-                tags
-                width
-              }
-            }
-          }
         }
       `}
       render={data => (
