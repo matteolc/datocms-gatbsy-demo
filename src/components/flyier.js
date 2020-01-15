@@ -85,9 +85,11 @@ export default function Flyier(props) {
         />
       }
       <div className={classes.overlay} />
-      <Grid container>
         <div className={classes.mainFeaturedPostContent}>
-          <Grid item md={12}>
+      <Grid 
+        spacing={2}
+        container >
+          <Grid item xs={12}>
             <Typography
               component="h1"
               variant="h3"
@@ -109,15 +111,8 @@ export default function Flyier(props) {
                 {flyier.description}
               </Markdown>
             </Typography>
-            <Grid
-              container
-              item
-              direction="row"
-              justify="left"
-              alignItems="top"
-              spacing={6}
-              xs={12}
-            >           
+               
+          </Grid>          
             <Grid item xs={12} sm={4} md={4}>
               <Card className={classes.transparentCard}>
                 <CardActionArea>
@@ -180,21 +175,15 @@ export default function Flyier(props) {
                   title="Live from space album cover"
                 />
               </Card>
-            </Grid>      
-            </Grid>       
-          </Grid>
-          <div style={{ padding: 20 }}>
-
-          </div>
-          <div style={{ padding: 20 }}>
+            </Grid> 
+      </Grid>
+          <div style={{ paddingTop: 20 }}>
             <Grid
               container
-              item
               direction="row"
               justify="center"
               alignItems="top"
               spacing={3}
-              xs={12}
             >
               {/*                     <Grid item md={12} spacing={0} >
                             <Typography component="h1" variant="h5" color="inherit" gutterBottom>
@@ -203,8 +192,8 @@ export default function Flyier(props) {
                     </div>
                     </Typography> 
                     </Grid> */}
-              <Grid item xs={12} sm={4} md={3}>
-                <Card>
+              <Grid item xs={12} sm={12} md={3}>
+                <Card style={{background: 'linear-gradient(to right, rgb(102, 45, 140) 0%, rgb(237, 30, 121) 100%)'}}>
                   <CardActionArea>
                     <CardMedia
                       className={classes.media}
@@ -237,8 +226,8 @@ export default function Flyier(props) {
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item xs={12} sm={4} md={3}>
-                <Card>
+              <Grid item xs={12} sm={12} md={3}>
+                <Card style={{background: 'linear-gradient(to right, rgb(213, 133, 255) 0%, rgb(0, 255, 238) 100%)'}}>
                   <CardActionArea>
                     <CardMedia
                       className={classes.media}
@@ -271,8 +260,8 @@ export default function Flyier(props) {
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item xs={12} sm={4} md={3}>
-                <Card>
+              <Grid item xs={12} sm={12} md={3}>
+                <Card style={{background: 'linear-gradient(to right, rgb(0, 146, 69) 0%, rgb(252, 238, 33) 100%)'}}>
                   <CardActionArea>
                     <CardMedia
                       className={classes.media}
@@ -308,7 +297,6 @@ export default function Flyier(props) {
             </Grid>
           </div>
         </div>
-      </Grid>
     </Paper>
   );
 }
