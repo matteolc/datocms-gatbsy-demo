@@ -39,7 +39,7 @@ export default function Header(props) {
     <StaticQuery
       query={graphql`
         query LogoQuery {
-          datoCmsAsset( tags: { eq: "logo"} ) {
+          datoCmsAsset(tags: { eq: "logo"}) {
             id
             url
           }

@@ -12,3 +12,4 @@ Dockerfile
 .dockerignore
 package-lock.json
 core
+yarn.lock
