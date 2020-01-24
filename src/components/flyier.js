@@ -94,7 +94,7 @@ export default function Flyier(props) {
   return (
     <Paper
       className={classes.mainFeaturedPost}
-      style={{ background: `url(${flyier.background.url}) no-repeat rgba(0,0,0,1)` }}
+      style={{ backgroundImage: `url(${flyier.background.url})` }}
     >
       {/* Increase the priority of the hero background image */}
       {
