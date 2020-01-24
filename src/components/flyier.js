@@ -38,11 +38,22 @@ const useStyles = makeStyles(theme => ({
   },
   mainFeaturedPostContent: {
     position: "relative",
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
     [theme.breakpoints.up("md")]: {
       padding: theme.spacing(6)
       //paddingRight: 0,
     }
+  },
+  bannerTitle: {
+    background: 'linear-gradient(290deg, rgba(255,255,255,1) 40%, rgba(210,210,210,1) 50%)',
+    borderRadius: 4,
+    color: 'black',
+    padding: theme.spacing(1),
+    [theme.breakpoints.up("md")]: {
+      padding: theme.spacing(6)
+      //paddingRight: 0,
+    }
+
   },
   card: {
     // minWidth: 275,
@@ -105,11 +116,12 @@ export default function Flyier(props) {
         />
       }
       <div className={classes.overlay} />
-        <div className={classes.mainFeaturedPostContent}>
+      <div className={classes.mainFeaturedPostContent}>
       <Grid 
         spacing={2}
         container >
           <Grid item xs={12}>
+            <div className={classes.bannerTitle}>
             <Typography
               component="h1"
               variant="h3"
@@ -124,14 +136,14 @@ export default function Flyier(props) {
               color="inherit"
               gutterBottom
             >
-              {flyier.subtitle}
+              <div className="flyier__subtitle">{flyier.subtitle}</div>
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
               <Markdown className={classes.markdown}>
                 {flyier.description}
               </Markdown>
             </Typography>
-               
+            </div>    
           </Grid>          
             <Grid item xs={12} sm={4} md={4}>
               <Card className={classes.gradient0}>

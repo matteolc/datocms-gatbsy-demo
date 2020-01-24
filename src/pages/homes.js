@@ -7,14 +7,12 @@ import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
 import Main from '../components/main';
 import MainFeaturedPost from '../components/main-featured-post';
-import Layout from "../components/layout"
+import Layout from "../components/layout";
+import PageBanner from '../components/page-banner';
 
-const HomesPage = ({ data }) => (
-  
+const HomesPage = ({ data }) => (  
   <Layout>
-    {data.allDatoCmsRetreat.edges.map(({ node: retreat }) => (
-        <MainFeaturedPost key={retreat.id} post={retreat} />
-      ))}  
+        <PageBanner key={data.datoCmsHomesBanner.id} post={data.datoCmsHomesBanner} />
   </Layout>
 )
 
@@ -22,18 +20,15 @@ export default HomesPage
 
 export const query = graphql`
   query HomesPageQuery {
-    allDatoCmsRetreat {
-      edges {
-        node {
-          id
-          description
-          linkText
-          title
-          image {
-                url
-            }
+    datoCmsHomesBanner {
+        id
+        image {
+            url
         }
-      }
-    }  
+        title
+        subtitle
+        description
+        linkText
+    } 
   }
 `

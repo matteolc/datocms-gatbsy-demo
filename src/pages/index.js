@@ -15,10 +15,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     {data.allDatoCmsFlyier.edges.map(({ node: flyier }) => (
         <Flyier key={flyier.id} flyier={flyier} />
-      ))}      
-    {data.allDatoCmsMainFeaturedPost.edges.map(({ node: post }) => (
-        <MainFeaturedPost key={post.id} post={post} />
-      ))}        
+      ))}     
   </Layout>
 )
 
@@ -26,19 +23,6 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
-    allDatoCmsMainFeaturedPost {
-      edges {
-        node {
-          id
-          description
-          linkText
-          title
-          image {
-              url
-            }
-        }
-      }
-    }  
     allDatoCmsFlyier {
       edges {
         node {

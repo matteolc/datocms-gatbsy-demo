@@ -22,7 +22,7 @@ const sections = [
   { title: 'Homes', url: '/homes' },
   { title: 'Retreats', url: '/retreats' },
   { title: 'Blog', url: '/blog' },
-  { title: 'About', url: '/about' },
+  //{ title: 'About', url: '/about' },
   //{ title: 'Contact', url: '/contact' },
 ];
 

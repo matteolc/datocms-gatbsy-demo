@@ -8,10 +8,12 @@ import Img from 'gatsby-image'
 import Main from '../components/main';
 import MainFeaturedPost from '../components/main-featured-post';
 import Layout from "../components/layout"
+import PageBanner from '../components/page-banner';
 
 const RetreatPage = ({ data }) => (
   
   <Layout>
+    <PageBanner key={data.datoCmsRetreatsBanner.id} post={data.datoCmsRetreatsBanner} />
     {data.allDatoCmsRetreat.edges.map(({ node: retreat }) => (
         <MainFeaturedPost key={retreat.id} post={retreat} />
       ))}  
@@ -22,6 +24,16 @@ export default RetreatPage
 
 export const query = graphql`
   query RetreatQuery {
+    datoCmsRetreatsBanner {
+      id
+      title
+      subtitle
+      linkText
+      description
+      image {
+        url
+      }
+    }    
     allDatoCmsRetreat {
       edges {
         node {
