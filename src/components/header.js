@@ -48,7 +48,7 @@ export default function Header(props) {
       render={data => (
     <React.Fragment>
       <div className={classes.root}>
-        <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
+        <AppBar position="fixed" style={{ background: 'rgba(0,0,0,1)', boxShadow: 'none'}}>
           <Toolbar className={classes.toolbar}>
               <Link 
                 color="inherit"

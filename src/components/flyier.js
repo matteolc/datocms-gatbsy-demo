@@ -90,7 +90,6 @@ const useStyles = makeStyles(theme => ({
 export default function Flyier(props) {
   const classes = useStyles();
   const { flyier } = props;
-  console.log(flyier);
 
   return (
     <Paper

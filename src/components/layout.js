@@ -71,12 +71,9 @@ const TemplateWrapper = ({ children }) => {
               seo={data.datoCmsHome.seoMetaTags}
             />            
             <Header title={data.datoCmsSite.globalSeo.siteName} sections={sections} />
-            <hr/>
-            <main>
+            
+            <main style={{paddingTop: 180}}>
               {children}
-              <Grid container spacing={5} className={classes.mainGrid}>
-                
-              </Grid>
             </main>
           </Container>
           <Footer title="Footer" description="Something here to give the footer a purpose!" />
