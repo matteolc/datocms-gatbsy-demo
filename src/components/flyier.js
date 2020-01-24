@@ -63,6 +63,27 @@ const useStyles = makeStyles(theme => ({
   },
   transparentCard: {
       backgroundColor: "rgba(0,0,0,.5)"
+  },
+  patternCard: {
+    //backgroundImage: "url(https://www.transparenttextures.com/patterns/exclusive-paper.png)",
+    backgroundColor: "rgba(0,0,0,.8)"
+  },
+  gradient0: {
+    background: 'linear-gradient(290deg, rgba(255,255,255,0.85) 50%, rgba(210,210,210,0.85) 50%)',
+    color: 'black'
+  },
+  gradient4: {
+    background: 'linear-gradient(290deg, rgba(255,255,255,0.85) 50%, rgba(210,210,210,0.85) 50%)',
+    color: 'black'
+  },  
+  gradient1: {
+    //background: 'linear-gradient(to right, rgba(102, 45, 140, 0.5) 0%, rgba(237, 30, 121, 0.5) 100%),url(https://www.transparenttextures.com/patterns/exclusive-paper.png)'
+  },
+  gradient2: {
+    //background: 'linear-gradient(to right, rgba(213, 133, 255, 0.5) 0%, rgba(0, 255, 238, 0.5) 100%),url(https://www.transparenttextures.com/patterns/exclusive-paper.png)'
+  },
+  gradient3: {
+    //background: 'linear-gradient(to right, rgba(0, 146, 69, 0.5) 0%, rgba(252, 238, 33, 0.5) 100%),url(https://www.transparenttextures.com/patterns/exclusive-paper.png)'
   }
 }));
 
@@ -114,16 +135,16 @@ export default function Flyier(props) {
                
           </Grid>          
             <Grid item xs={12} sm={4} md={4}>
-              <Card className={classes.transparentCard}>
+              <Card className={classes.gradient0}>
                 <CardActionArea>
                   <CardContent>
-                    <Typography variant="h5" component="h2">
-                    <div
+                    <Typography variant="h4" component="h2">
+                    <span
                         className="flyier__title"
                         style={{ "text-align": "left" }}
                       >                        
                       What's included
-                      </div>
+                      </span>
                     </Typography>
                     <Typography className={classes.pos} color="textSecondary">
                       adjective
@@ -145,10 +166,10 @@ export default function Flyier(props) {
               </Card>
             </Grid>
             <Grid item xs={12} sm={8} md={8}>
-              <Card className={[classes.card, classes.transparentCard]}>
-                <div className={classes.details}>
-                  <CardContent className={classes.content}>
-                    <Typography component="h5" variant="h5">
+              <Card className={classes.gradient0}>
+                <CardActionArea>
+                  <CardContent>
+                    <Typography component="h2" variant="h4">
                       <div
                         className="flyier__title"
                         style={{ "text-align": "left" }}
@@ -163,17 +184,17 @@ export default function Flyier(props) {
                       {flyier.content[0].column1}
                     </Markdown>
                   </CardContent>
-                <CardActions>
-                  <Button size="small">
+                </CardActionArea>
+{/*                 <CardActions>
+                  <Button variant="contained" size="small" color="secondary">
                       Learn More
                     </Button>
-                </CardActions>                  
-                </div>
-                <CardMedia
+                </CardActions>  */}
+{/*                 <CardMedia
                   className={classes.cover}
                   image="https://www.datocms-assets.com/20583/1579002542-canva-beautiful-girl-with-art-hair-composition.jpg"
                   title="Live from space album cover"
-                />
+                /> */}
               </Card>
             </Grid> 
       </Grid>
@@ -193,7 +214,7 @@ export default function Flyier(props) {
                     </Typography> 
                     </Grid> */}
               <Grid item xs={12} sm={12} md={3}>
-                <Card style={{background: 'linear-gradient(to right, rgb(102, 45, 140) 0%, rgb(237, 30, 121) 100%)'}}>
+                <Card className={classes.gradient4}>
                   <CardActionArea>
                     <CardMedia
                       className={classes.media}
@@ -209,7 +230,7 @@ export default function Flyier(props) {
                         Connection Cerimonies
                       </Typography>
                       <Typography variant="h5" component="h2">
-                        {flyier.content[1].column1Title}
+                      <div className="flyier__title">{flyier.content[1].column1Title}</div>
                       </Typography>
                       <Typography className={classes.pos} color="textSecondary">
                         adjective
@@ -220,14 +241,14 @@ export default function Flyier(props) {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small">
+                    <Button variant="contained" size="small" color="secondary">
                       Learn More
                     </Button>
                   </CardActions>
                 </Card>
               </Grid>
               <Grid item xs={12} sm={12} md={3}>
-                <Card style={{background: 'linear-gradient(to right, rgb(213, 133, 255) 0%, rgb(0, 255, 238) 100%)'}}>
+                <Card className={classes.gradient4}>
                   <CardActionArea>
                     <CardMedia
                       className={classes.media}
@@ -243,7 +264,7 @@ export default function Flyier(props) {
                         Connection Cerimonies
                       </Typography>
                       <Typography variant="h5" component="h2">
-                        {flyier.content[1].column2Title}
+                      <div className="flyier__title">{flyier.content[1].column2Title}</div>
                       </Typography>
                       <Typography className={classes.pos} color="textSecondary">
                         adjective
@@ -261,7 +282,7 @@ export default function Flyier(props) {
                 </Card>
               </Grid>
               <Grid item xs={12} sm={12} md={3}>
-                <Card style={{background: 'linear-gradient(to right, rgb(0, 146, 69) 0%, rgb(252, 238, 33) 100%)'}}>
+                <Card className={classes.gradient4}>
                   <CardActionArea>
                     <CardMedia
                       className={classes.media}
@@ -277,7 +298,7 @@ export default function Flyier(props) {
                         Connection Cerimonies
                       </Typography>
                       <Typography variant="h5" component="h2">
-                        {flyier.content[1].column3Title}
+                      <div className="flyier__title">{flyier.content[1].column3Title}</div>
                       </Typography>
                       <Typography className={classes.pos} color="textSecondary">
                         adjective

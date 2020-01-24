@@ -23,7 +23,7 @@ const sections = [
   { title: 'Retreats', url: '/retreats' },
   { title: 'Blog', url: '/blog' },
   { title: 'About', url: '/about' },
-  { title: 'Contact', url: '/contact' },
+  //{ title: 'Contact', url: '/contact' },
 ];
 
 const TemplateWrapper = ({ children }) => {
@@ -71,6 +71,7 @@ const TemplateWrapper = ({ children }) => {
               seo={data.datoCmsHome.seoMetaTags}
             />            
             <Header title={data.datoCmsSite.globalSeo.siteName} sections={sections} />
+            <hr/>
             <main>
               {children}
               <Grid container spacing={5} className={classes.mainGrid}>
